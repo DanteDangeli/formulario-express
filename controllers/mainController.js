@@ -6,8 +6,11 @@ const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
 
 
 const controller = {
+    home: (req, res)=>{
+        res.render('home')
+    },
     listarUsuarios : (req, res)=>{
-        res.render('listarUsuarios', {users})
+        res.render(path.join(__dirname, '../views/listaUsuarios.ejs'), {users})
     },
     eliminarUsuario: (req, res)=>{
         let userEmail = req.params.email;

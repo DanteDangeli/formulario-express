@@ -18,6 +18,9 @@ app.use(express.json());
 
 app.use(methodOverride('_method'));
 
+const mainController = require('./routes/main');
+app.use('/', mainController);
+
 app.listen(3000, () => {
     console.log('Servidor andando')
 });

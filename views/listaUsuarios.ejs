@@ -15,7 +15,7 @@
 							<h2>$ <%= users[i].first_name %> </h2>
 							<span> <%= users[i].last_name %></span>
 							<p> <%= users[i].email %></p>
-							<a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+							<a href="/products/edit/" class="action-button edit">EDITAR PRODUCTO</a>
 						<form action="/eliminarUsuario/<%= users.email %>" method="delete" style="display: inline-flex">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
 						</form>
@@ -29,10 +29,5 @@
 		
 		</div>
 	</div>
-	<!-- /todos los productos -->
-
-	<!-- footer -->
-	<%- include('partials/footer') %>
-	<!-- /footer -->
 </body>	
 </html>
