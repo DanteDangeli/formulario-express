@@ -9,4 +9,7 @@ const controller = {
     listarUsuarios : (req, res)=>{
         res.render('listarUsuarios', {users})
     }
-}
+};
+
+
+module.exports=controller;
